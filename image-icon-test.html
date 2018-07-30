@@ -1,0 +1,55 @@
+<?php require_once("includes/DBConnection.php"); ?>
+<?php include("includes/header.php"); ?>
+
+<div class="knobs">
+
+	<h6 class="foo">Balance</h6>
+	<!-- Balance control -->
+	<div class="widget-knob widget-balance">
+		<input type="text" value="0" autocomplete="off" id="balance" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#balance').knobRot({
+					'classes': ['balance'],
+					'dragVertical': false,
+					'frameCount': 35,
+					'frameWidth': 120,
+					'frameHeight': 120,
+					'detent': true,
+					'detentThreshold': 2,
+					'minimumValue': -50,
+					'maximumValue': 50,
+					'hideInput': true
+				});
+			});
+		</script>
+	</div>
+	<!--/ Balance control -->
+
+	<h6 class="foo">Volume</h6>
+	<!-- Volume control -->
+	<div class="widget-knob widget-volume">
+		<input type="text" value="77"  autocomplete="off" id="volume" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#volume').knobRot({
+					'classes': ['volume'],
+					'dragVertical': false,
+					'frameCount': 58,
+					'frameWidth': 80,
+					'frameHeight': 80,
+					'detent': true,
+					'detentThreshold': 5,
+					'minimumValue': 0,
+					'maximumValue': 100,
+					'hideInput': true
+				});
+			});
+		</script>
+	</div>
+	<!--/ Volume control -->
+
+</div>
+
+<?php include("includes/footer.php"); ?>
+
